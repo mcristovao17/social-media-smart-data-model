@@ -1,0 +1,12 @@
+{
+    "id": "urn:ngsi-ld:SocialMediaMetric:facebook:12345:followers:2024-03-28",
+    "type": "SocialMediaMetric",
+    "platform": "Facebook",
+    "account_id": "12345",
+    "metric": "followers",
+    "value": 12000,
+    "organic": true,
+    "status_date": "2024-03-28T00:00:00Z",
+    "granularity": "daily",
+    "company_name": "Example Company S.A."
+}

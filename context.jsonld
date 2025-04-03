@@ -1,0 +1,12 @@
+{
+    "@context": {
+      "platform": "https://schema.org/applicationCategory",
+      "account_id": "https://schema.org/identifier",
+      "metric": "https://schema.org/PropertyValue",
+      "value": "https://schema.org/value",
+      "organic": "https://schema.org/Boolean",
+      "status_date": "https://schema.org/DateTime",
+      "granularity": "https://schema.org/Text",
+      "company_name": "https://schema.org/name"
+    }
+}

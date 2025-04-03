@@ -1,0 +1,41 @@
+{
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+      "./context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:SocialMediaMetric:facebook:12345:followers:2024-03-28",
+    "type": "SocialMediaMetric",
+    "platform": {
+      "type": "Property",
+      "value": "Facebook"
+    },
+    "account_id": {
+      "type": "Property",
+      "value": "12345"
+    },
+    "metric": {
+      "type": "Property",
+      "value": "followers"
+    },
+    "value": {
+      "type": "Property",
+      "value": 12000
+    },
+    "organic": {
+      "type": "Property",
+      "value": true
+    },
+    "status_date": {
+      "type": "Property",
+      "value": "2024-03-28T00:00:00Z"
+    },
+    "granularity": {
+      "type": "Property",
+      "value": "daily"
+    },
+    "company_name": {
+      "type": "Property",
+      "value": "Example Company S.A."
+    }
+  }
+  
