@@ -37,6 +37,6 @@ The model is compatible with NGSI-LD and uses the following context(s):
 
 ```json
 [
-  "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
-  "https://mcristovao17.github.io/social-media-smart-data-model/context.jsonld"
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "https://raw.githubusercontent.com/mcristovao17/social-media-smart-data-model/main/context.jsonld"
 ]
