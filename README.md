@@ -1,47 +1,42 @@
-model: SocialMediaMetric
-type: object
-description: A data model to represent a single metric collected from a social media account.
-required:
-  - id
-  - type
-  - platform
-  - account_id
-  - metric
-  - value
-  - organic
-  - status_date
-  - granularity
-  - company_name
-properties:
-  id:
-    type: string
-    description: Unique identifier of the metric record
-  type:
-    type: string
-    enum: [SocialMediaMetric]
-  platform:
-    type: string
-    description: Name of the social media platform (e.g., Facebook, Instagram)
-  account_id:
-    type: string
-    description: Identifier of the account in the platform
-  metric:
-    type: string
-    description: Name of the measured metric (e.g., followers, likes)
-  value:
-    type: number
-    format: float
-    description: Numeric value of the metric
-  organic:
-    type: boolean
-    description: Whether the metric is organic (true) or paid (false)
-  status_date:
-    type: string
-    format: date-time
-    description: Timestamp when the metric was recorded
-  granularity:
-    type: string
-    description: Aggregation level of the metric (e.g., daily, monthly)
-  company_name:
-    type: string
-    description: Name of the company associated with the account
+# SocialMediaMetric - Smart Data Model
+
+This Smart Data Model represents a **single metric** collected from a **social media account**, allowing normalized and semantically enriched representation of social KPIs (e.g., followers, likes, reach) across platforms such as Facebook, Instagram, LinkedIn, Twitter, YouTube, and more.
+
+It is designed to be **cross-platform, extensible**, and **compatible with NGSI-LD**, making it suitable for use in **Data Spaces**, **marketing intelligence systems**, and **interoperable analytics tools**.
+
+---
+
+## Entity: `SocialMediaMetric`
+
+### Description
+
+A standardized representation of a single metric for a specific social media account on a specific day. It includes metadata about whether the metric is organic or paid, its granularity, and the associated company name.
+
+---
+
+## Properties
+
+| Property       | Type     | Description                                                                 |
+|----------------|----------|-----------------------------------------------------------------------------|
+| `id`           | `string` | Unique identifier of the metric entity (must follow NGSI-LD URN convention) |
+| `type`         | `string` | Always set to `SocialMediaMetric`                                           |
+| `platform`     | `string` | Name of the platform (e.g., Facebook, Instagram)                            |
+| `account_id`   | `string` | ID of the account within the platform                                       |
+| `metric`       | `string` | Name of the metric collected (e.g., `likes`, `followers`)                   |
+| `value`        | `float`  | Numeric value of the metric                                                 |
+| `organic`      | `boolean`| `true` if organic, `false` if paid                                          |
+| `status_date`  | `date-time` | ISO timestamp when the metric was recorded                              |
+| `granularity`  | `string` | Aggregation level of the metric (e.g., `daily`, `weekly`)                  |
+| `company_name` | `string` | Name of the company that owns the social media account                      |
+
+---
+
+## JSON-LD Context
+
+The model is compatible with NGSI-LD and uses the following context(s):
+
+```json
+[
+  "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+  "https://mcristovao17.github.io/social-media-smart-data-model/context.jsonld"
+]
